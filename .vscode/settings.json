@@ -10,6 +10,7 @@
         "INCDEC.C": "cpp",
         "TERNARY.C": "cpp",
         "BINARY.C": "cpp",
-        "IF.C": "cpp"
+        "IF.C": "cpp",
+        "IFELSE.C": "cpp"
     }
 }
