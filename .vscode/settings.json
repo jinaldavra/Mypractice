@@ -2,6 +2,7 @@
     "files.associations": {
         "FORLOOP.C": "cpp",
         "WHILELOO.C": "cpp",
-        "DOWHILE.C": "cpp"
+        "DOWHILE.C": "cpp",
+        "ARITHMET.C": "cpp"
     }
 }
