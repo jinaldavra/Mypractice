@@ -7,6 +7,7 @@
         "ASSIGNME.C": "cpp",
         "RELATION.C": "cpp",
         "LOGICAL.C": "cpp",
-        "INCDEC.C": "cpp"
+        "INCDEC.C": "cpp",
+        "TERNARY.C": "cpp"
     }
 }
