@@ -11,6 +11,7 @@
         "TERNARY.C": "cpp",
         "BINARY.C": "cpp",
         "IF.C": "cpp",
-        "IFELSE.C": "cpp"
+        "IFELSE.C": "cpp",
+        "IFELSEIF.C": "cpp"
     }
 }
