@@ -13,6 +13,7 @@
         "IF.C": "cpp",
         "IFELSE.C": "cpp",
         "IFELSEIF.C": "cpp",
-        "NESTEDIF.C": "cpp"
+        "NESTEDIF.C": "cpp",
+        "SWITCH.C": "cpp"
     }
 }
