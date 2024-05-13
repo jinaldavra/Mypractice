@@ -5,6 +5,7 @@
         "DOWHILE.C": "cpp",
         "ARITHMET.C": "cpp",
         "ASSIGNME.C": "cpp",
-        "RELATION.C": "cpp"
+        "RELATION.C": "cpp",
+        "LOGICAL.C": "cpp"
     }
 }
