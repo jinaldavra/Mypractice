@@ -9,6 +9,7 @@
         "LOGICAL.C": "cpp",
         "INCDEC.C": "cpp",
         "TERNARY.C": "cpp",
-        "BINARY.C": "cpp"
+        "BINARY.C": "cpp",
+        "IF.C": "cpp"
     }
 }
