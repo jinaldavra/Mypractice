@@ -4,6 +4,7 @@
         "WHILELOO.C": "cpp",
         "DOWHILE.C": "cpp",
         "ARITHMET.C": "cpp",
-        "ASSIGNME.C": "cpp"
+        "ASSIGNME.C": "cpp",
+        "RELATION.C": "cpp"
     }
 }
