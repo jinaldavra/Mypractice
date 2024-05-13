@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "FORLOOP.C": "cpp"
+        "FORLOOP.C": "cpp",
+        "WHILELOO.C": "cpp"
     }
 }
