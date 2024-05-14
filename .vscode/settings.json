@@ -14,6 +14,15 @@
         "IFELSE.C": "cpp",
         "IFELSEIF.C": "cpp",
         "NESTEDIF.C": "cpp",
-        "SWITCH.C": "cpp"
+        "SWITCH.C": "cpp",
+        "FIRSTPTN.C": "cpp",
+        "SECNDPTN.C": "cpp",
+        "THIRDPTN.C": "cpp",
+        "FORTHPTN.C": "cpp",
+        "FIFTHPTN.C": "cpp",
+        "SVNTHPTN.C": "cpp",
+        "SIXTHPTN.C": "cpp",
+        "EIGHTHPT.C": "cpp",
+        "NINTHPTN.C": "cpp"
     }
 }
