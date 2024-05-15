@@ -1,0 +1,13 @@
+Question 3 : Write a function to calculate the factorial of a given non-negative integer 'n'.
+
+#include<stdio.h>
+int main(){
+    int i,fact=1,num=7;
+    for(i=1;i<=num;i++)
+    {
+        fact*=i;
+    }
+    printf("Factorial is %d",fact);
+    
+    return 0;
+}
