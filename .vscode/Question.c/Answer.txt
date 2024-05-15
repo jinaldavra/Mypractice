@@ -1,3 +1,11 @@
+Question 1 : What is the formula to convert Celsius to Fahrenheit ?
+
+  F(9/5)C+32
+
+Question 2 : How do you convert Fahrenheit to Celsius in C ?
+
+  C=(F-32)*5/9
+
 Question 3 : Write a function to calculate the factorial of a given non-negative integer 'n'.
 
 #include<stdio.h>
@@ -11,3 +19,20 @@ int main(){
     
     return 0;
 }
+
+Question 4 : Write a program to generate the fibonacci series up to 'n' terms.
+
+#include<stdio.h>    
+ int main(){
+     int n1=0,n2=1,n3,i,num=10;
+     printf("%d\n",n1);
+     printf("%d\n",n2);
+     for(i=2;i<num;i++)
+     {
+         n3=n1+n2;
+         printf("%d\n",n3);
+         n1=n2;
+         n2=n3;
+     }
+    return 0;
+ }
