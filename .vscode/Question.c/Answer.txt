@@ -1,10 +1,30 @@
 Question 1 : What is the formula to convert Celsius to Fahrenheit ?
 
-  F(9/5)C+32
+  Fahrenheit=(9/5)Celsius+32;
+
+#include<stdio.h>  
+int main(){
+    float f,c;
+    c=24;
+    f=( (c*9)/5)+32; 
+    printf("Celsius to Fahrenheit is : %f",f);
+    return 0 ;
+}
+
 
 Question 2 : How do you convert Fahrenheit to Celsius in C ?
 
-  C=(F-32)*5/9
+   Celsius=((Fahrenheit-32)*5)/9; 
+
+#include<stdio.h>  
+int main(){
+    float f,c;
+    f=64;
+    c=((f-32)*5)/9; 
+    printf("Fahrenheit to Celsius is : %f",c);
+    return 0 ;
+}
+
 
 Question 3 : Write a function to calculate the factorial of a given non-negative integer 'n'.
 
@@ -19,6 +39,7 @@ int main(){
     
     return 0;
 }
+
 
 Question 4 : Write a program to generate the fibonacci series up to 'n' terms.
 
@@ -36,6 +57,7 @@ Question 4 : Write a program to generate the fibonacci series up to 'n' terms.
      }
     return 0;
  }
+ 
 
 Question 5 : Write a program to determine whether a given integer is even or odd.
 
@@ -52,4 +74,3 @@ Question 5 : Write a program to determine whether a given integer is even or odd
 
  Question 6 : Write a program to determine whether a given integer is a prime number or not.
 
- 
