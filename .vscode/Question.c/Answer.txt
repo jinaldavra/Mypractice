@@ -72,5 +72,79 @@ Question 5 : Write a program to determine whether a given integer is even or odd
      return 0;
  }
 
- Question 6 : Write a program to determine whether a given integer is a prime number or not.
+Question 6 : Write a program to determine whether a given integer is a prime number or not.
+
+#include<stdio.h>
+  int main()
+ {
+     int num=11;
+     if(num%2 == 0){
+         printf("Number is not prime");
+     }else{
+         printf("Number is prime");
+     }
+     return 0;
+ }
+
+
+Question 7 : Write a program to calculate the simple interest for a given principal amount,rate of 
+              interest,and time period.
+
+Simple Interest = (P*R*T)/100;              
+
+#include<stdio.h>
+   int main(){
+    
+    float P = 30000,R = 30,T=3,SI;
+    
+    SI = (P*R*T)/100;
+    printf("Simple Interest is :%.2f",SI);
+    
+    return 0;
+}             
+
+
+Question 8 : Write a program to calculate the area of a circle given its radius.
+
+Area = PI * radius * radius;
+
+#include<stdio.h>
+   int main(){
+    
+    float radius=15,area,PI=3.14;
+    
+    area = PI * radius * radius;
+    printf("Area of Circle is :%.2f",area);
+    
+    return 0;
+}
+
+
+Question 9 : Write a program to find the largest number among three given numbers.
+
+#include<stdio.h>
+    int main(){
+        int a = 200,b = 3000,c =1000;
+        
+    if (a > b && a > c){
+        printf("Biggest number is A");
+    }else if (b > a && b > c){
+        printf("Biggest number is B");
+    }else if (c > a && c > b){
+        printf("Biggest number is C");
+    }
+    return 0;
+}
+
+
+Question 10 : What is the purpose of the void keyword in C ?
+
+        The void keyword in C is used to indicate that a function does not return any value or that a 
+pointer does not point to any specific data type. For example, void is used in function declarations
+like void functionName() to indicate that the function does not return anything.
+
+
+
+
+
 
