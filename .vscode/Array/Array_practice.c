@@ -68,3 +68,16 @@ int main() {
 }
 
 
+#include <stdio.h>
+
+int main() {
+    int num[5] = {81,82,83,84,85};  
+    num[5] = 86;  
+    for (int i = 0; i < 6; i++) {
+        printf("Element at index %d: %d\n", i, num[i]);             // Add new index
+    }
+
+    return 0;
+}
+
+
