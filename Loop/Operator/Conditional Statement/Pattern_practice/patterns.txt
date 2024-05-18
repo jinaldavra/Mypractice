@@ -89,7 +89,7 @@ int main(){
 		}
 		for(col=num;col>=num-row+1;col--)
 		{
-			printf("* ");
+			printf("*");
 		}
 		printf("\n");
 	}
