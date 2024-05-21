@@ -92,5 +92,23 @@ int main(){
 
 Question 6 : Write a Recursive function to reverse a string.
 
+#include<stdio.h>
+#include<string.h>
+int reverse(char str[],int index){
+    int len = strlen(str);
+    if(index < len){
+        reverse(str,index + 1);
+        printf("%c",str[index]);
+    }
+}
+int main(){
+    char a[] = "Jinal";
+    reverse(a,0);
+    return 0;
+}
+
+Question 7 : Write a Recursive function to determine if a given string is a palindrome.
+
+
 
 
