@@ -1,0 +1,5 @@
+Question 1 : Write a C function to reverse an array of integers.
+
+
+Question 2 : How would you find the largest element in an array using a loop ?
+
