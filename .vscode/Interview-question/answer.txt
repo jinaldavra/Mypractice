@@ -1,5 +1,237 @@
 Question 1 : Write a C function to reverse an array of integers.
 
+#include<stdio.h>
+int rev(int arr[],int n){
+    int start = 0;
+    int end = n-1;
+    int temp;
+        while(start < end){
+            temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+}
+int printArray(int arr[],int size){
+    int i;
+    for(i = 0; i < size; i++){
+        printf("%d ",arr[i]);
+    }
+}
+int main(){
+    int arr[] = {1,2,3,4,5};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    rev(arr,n);
+    printArray(arr,n);
+    return 0;
+}
+
 
 Question 2 : How would you find the largest element in an array using a loop ?
+
+#include<stdio.h>
+int large(int arr[],int n){
+    if(n <= 0){
+        return 0;
+    }
+    int max = arr[0];
+    for(int i = 0; i < n; i++){
+        if(arr[i] > max){
+            max = arr[i];
+        }
+    }
+    return max;
+}
+int main(){
+    int arr[] = {1,2,3,4,5,7};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    int largest = large(arr,n);
+    printf("%d",largest);
+    return 0;
+    
+}
+
+
+Question 3 : Explain the difference between for,while and do-while loops with examples.
+
+For :
+
+#include<stdio.h>
+int main(){
+    for(int i = 1; i <= 5; i++){
+        printf("%d ",i);
+    }
+}
+
+While :
+
+#include<stdio.h>
+int main(){
+    int i = 1;
+    while(i <= 5)
+    {
+        printf("%d ",i);
+        i++;
+    }
+}
+
+Do-while :
+
+#include<stdio.h>
+int main(){
+    int i = 1;
+    do
+    {
+        printf("%d ",i);
+        i++;
+    }while(i <= 5);
+}
+
+Question 4 : Write a program to check if a given number is prime.
+
+#include<stdio.h>
+int main(){
+    int num = 3;
+    if(num % 2 == 0){
+        printf("This number is not prime");
+    }
+    else{
+        printf("This number is prime");
+    }
+    return 0;
+}
+
+Question 5 : How do you use an if-else statement to check if a number is even or odd ?
+
+#include<stdio.h>
+int main(){
+    int num = 4;
+    if(num % 2 == 0){
+        printf("This number is even");
+    }
+    else{
+        printf("This number is odd");
+    }
+    return 0;
+}
+
+Question 6 : What is a function pointer and how do you declare and use one in C ?
+
+A function pointer in C is a pointer that points to a function instead of a data variable.
+
+#include<stdio.h>
+int main(){
+    int a = 10, *b;
+    b = &a;
+    printf("%d",*b);
+}
+
+Question 7 : Write a recursive function to calculate the factorial of a number.
+
+#include<stdio.h>
+int fact(int num){
+    if(num == 1){
+        return 1;
+    }
+    else{
+        return num * fact(num-1);
+    }
+}
+int main(){
+    int n = 5;
+    printf("The factorial of %d is %d",n,fact(n));
+    return 0;
+}
+
+Question 8 : How do you pass a 2D array to a function in C ?
+
+#include<stdio.h>
+int arr(int row,int col,int matrix[row][col]){
+    for(int i = 0; i < row; i++){
+        for(int j = 0; j < col; j++){
+            printf("%d ",matrix[i][j]);
+        }
+        printf("\n");
+    }
+}
+int main(){
+    int matrix[2][3] = {
+        {1,2,3},
+        {4,5,6}
+    };
+    arr(2,3,matrix);
+    return 0;
+}
+
+Question 9 : Explain the difference between pass-by-value and pass-by-reference with example.
+
+pass-by-value :
+
+#include<stdio.h>
+int pass_by_value(int a,int b){
+    int c;
+    c = a;
+    a = b;
+    b = c;
+    printf("a = %d b = %d\n",a,b);
+}
+int main(){
+    int x = 10, y = 20;
+    pass_by_value(x,y);
+    printf("x = %d y = %d",x,y);
+    return 0;
+}
+
+pass-by-reference :
+
+#include<stdio.h>
+int pass_by_ref(int* a,int* b){
+    int c;
+    c = *a;
+    *a = *b;
+    *b = c;
+    printf("a = %d b = %d\n",*a,*b);
+}
+int main(){
+    int x = 10, y = 20;
+    pass_by_ref(&x,&y);
+    printf("x = %d y = %d",x,y);
+    return 0;
+}
+
+Question 10 : Write a program to sort an array of integers using the bubble sort algorithm.
+
+#include<stdio.h>
+int bubble(int arr[],int n){
+    int temp;
+    for(int i = 0; i < n-1; i++){
+        for (int j = 0; j < n-i-1; j++){
+            if(arr[j] > arr[j+1]){
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+}
+int printArray(int arr[],int size){
+    int i;
+    for(int i = 0; i < size; i++){
+        printf("%d ",arr[i]);
+    }
+}
+int main(){
+    int arr[] = {12,34,65,21,35,56};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    bubble(arr,n);
+    printArray(arr,n);
+    return 0;
+}
+
+
+
+
+
+
 
