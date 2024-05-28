@@ -81,3 +81,23 @@ int main() {
 }
 
 
+#include<stdio.h>
+int main(){
+    float marks[5] = {23,34,45,56,67};
+    const char *sub[5] = {"CSS","Java","Python","C++","Html"};
+    
+    for(int i = 0; i < 5; i++){
+        float score;
+        printf("%s mark : ",sub[i]);
+        scanf("%f",&score);
+        marks[i] = score;                                         // sub via marks
+    }
+    int total = 0;
+    for(int i = 0; i < 5; i++){
+        printf("%s mark : %2.f\n",sub[i],marks[i]);
+        total += marks[i];
+    }
+    printf("Total : %d\n",total);
+    printf("Percentage : %2.f",total/500);
+}
+
