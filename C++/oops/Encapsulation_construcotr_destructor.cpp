@@ -80,3 +80,29 @@ int main(){
     Student info("Dhruv Rawat","Information Technology");
     return 0;
 }
+
+#include<iostream>
+using namespace std;
+class Student{
+    // data member
+    public :
+        int Index;
+        string Name;
+        float GR;
+    // constructor
+    Student(int i,string n,float g){
+        Index = i;
+        Name = n;
+        GR = g;
+    }
+    // destructor
+    ~ Student(){
+        cout<<Index<<"  "<<Name<<"  "<<GR<<endl;
+    }
+};
+int main(){
+    Student s1(1,"Luis",202);
+    Student s2(2,"Dennis",203);
+    return 0;
+}
+
