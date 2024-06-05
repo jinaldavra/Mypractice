@@ -43,3 +43,31 @@ int main(){
     c3d.shape();
     return 0;
 }
+
+// Example :
+
+#include<iostream>
+using namespace std;
+class Account{
+    public :
+        float Salary = 60000;
+};
+class Programmer : public Account{
+    public :
+        float Bonus = 5000;
+};
+class Other : public Account{
+    public :
+        float Expense = 4000;
+};
+int main(){
+    Programmer p1;
+    Other o1;
+    cout<<"Programmer's Salary : "<<p1.Salary<<endl;
+    cout<<"Programmer's Bonus  : "<<p1.Bonus<<endl;
+    
+    
+    cout<<"Other's Salary  : "<<o1.Salary<<endl;
+    cout<<"Other's Expense : "<<o1.Expense<<endl;
+    return 0;
+}
