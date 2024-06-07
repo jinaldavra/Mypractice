@@ -18,3 +18,26 @@ int main(){
     cout<<"My ATM pin is : "<<myfriend(m1);
     return 0;
 }
+
+// Example :
+
+#include<iostream>
+using namespace std;
+class MY_NAME{
+    private :
+        string name;
+    public :
+        void setName(string n){
+            name = n;
+        }
+        friend string myfriend(MY_NAME obj);
+};
+string myfriend(MY_NAME obj){
+    return obj.name;
+}
+int main(){
+    MY_NAME m1;
+    m1.setName("JINAL");
+    cout<<"MY NAME IS : "<<myfriend(m1);
+    return 0;
+}
