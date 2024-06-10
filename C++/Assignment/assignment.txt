@@ -1,0 +1,273 @@
+1] Create a class :
+Write a C++ program to create a class Rectangle with attributes length and width. Include methods to calculate
+the area and parameter of the rectangle. Create an object of the class and display its area and parameter.
+
+#include<iostream>
+using namespace std;
+class Rectangle{
+    public :
+    // data member
+        int length = 10;
+        int width = 9;
+        // member function
+        void display(){
+            int area = length * width;
+            cout<<"Area of Rectangle is : "<<area<<endl;
+            int perimeter = 2 * (length + width);
+            cout<<"Perimeter of Rectangle is : "<<perimeter<<endl;
+        }
+};
+int main(){
+    Rectangle r1;
+    r1.display(); // display area and perimeter
+    return 0;
+}
+
+
+2] Constructors and Destructors :
+Write a class Circle with a private attribute radius. Include a default constructor to initialize the
+radius to 1 and a parameterized constructor to initializeit to a user-defined value.Also,include a 
+dedtructor that displays a message when an object is destroyed.
+
+#include<iostream>
+using namespace std;
+class Circle{
+    private : 
+        float radius;
+    public :
+    // Default constructor
+    Circle(){
+        radius = 1;
+        cout<<"Default constructor - radius to 1."<<endl;
+    }
+    // Parameterized constructor
+    Circle(float r){
+        radius = r;
+        cout<<"Parameterized constructor - "<<radius<<endl;
+    }
+    // destructor
+    ~ Circle(){
+        cout<<"Circle object is destroyed by "<<radius<<endl;
+    }
+};
+int main(){
+    Circle c1(5);
+    return 0;
+}
+
+3] Inheritance Example:
+Create a base class Animal with a method makeSound(). Derive two classes Dog and Cat from Animal and 
+override the makeSound() method in each derived class to print "Bark" and "Meow", respectively. Write a 
+program to demonstrate polymorphism using these classes.
+
+#include<iostream>
+using namespace std;
+class Animal{
+    public :
+        virtual void makesound() = 0;
+};
+class Dog : public Animal{
+    public :
+        void makesound() override{
+            cout<<"Bark"<<endl;
+        }
+};
+class Cat : public Animal{
+    public :
+        void makesound() override{
+            cout<<"Meow"<<endl;
+        }
+};
+int main(){
+    Dog d1;
+    Cat c1;
+    
+    Animal* animal1;
+    animal1 = &d1;
+    Animal* animal2;
+    animal2 = &c1;
+   
+    animal1 -> makesound();
+    animal2 -> makesound();
+    return 0;
+}
+
+4] Access Control:
+Create a class Person with private attributes name and age. Provide public getter and setter methods to 
+access and modify these attributes. Ensure the setter methods validate the input before assigning it to 
+the attributes.
+
+#include<iostream>
+#include<string>
+using namespace std;
+class Person{
+    private :
+        string name;
+        int age;
+    public :
+        void setName(const string& n){
+            if(!n.empty()){
+                name = n;   
+            }
+        }
+        void setAge(int a){
+            if(a >= 0 && a <= 100){
+                age = a;
+            }
+        }
+        string getName(){
+            return name;
+        }
+        int getAge(){
+            return age;
+        }
+};
+int main(){
+    Person p1;
+    p1.setName("John Doe");
+    p1.setAge(30);
+    cout<<"Name : "<<p1.getName()<<endl;
+    cout<<"Age  : "<<p1.getAge()<<endl;
+    return 0;
+}
+
+5] Static Members:
+Write a class Counter with a static variable count that tracks the number of objects created. Include a
+constructor that increments this count and a static method to return the current count. Demonstrate the
+use of this class in a program.
+
+
+6] Friend Function:
+Create two classes, Box and Cube. The Box class has private attributes length, width, and height. The 
+Cube class has a private attribute side. Write a friend function that can access private members of both
+classes and compare their volumes.
+
+#include<iostream> 
+using namespace std;
+class Cube;
+class Box{
+    private :
+        double length;
+        double width;
+        double height;
+    public :
+        Box(double l,double w,double h) : length(l),width(w),height(h){}
+        friend void compare(const Box& box,const Cube& cube);
+};
+class Cube{
+    private :
+        double side;
+    public :
+        Cube(double s) : side(s){}
+        friend void compare(const Box& box,const Cube& cube);
+};
+void compare(const Box& box,const Cube& cube){
+    double boxVolume = box.length * box.width * box.height;
+    double cubeVolume = cube.side * cube.side * cube.side;
+    if(boxVolume > cubeVolume){
+        cout<<"Volume of Box is greater than volume of Cube"<<endl;
+    }
+    else if(boxVolume < cubeVolume){
+        cout<<"Volume of Cube is greater than volume of Box"<<endl;
+    }
+    else{
+        cout<<"Volume of Box and Volume of Cube are equal"<<endl;
+    }
+}
+int main(){
+    Box box(3,4,5);
+    Cube cube(4);
+    compare(box,cube);
+    return 0;
+}
+
+7] Overload Operators:
+Overload the + operator in a class Complex to add two complex numbers. Each complex number should have 
+two private attributes real and imaginary. Demonstrate the use of this operator overloading in the main 
+function.
+
+#include<iostream>
+using namespace std;
+class Complex{
+    private :
+        float real;
+        float imag;
+    public :
+        Complex() : real(0),imag(0){}
+        Complex(float r,float i) : real(r),imag(i){}
+        Complex operator + (const Complex &obj){
+            Complex temp;
+            temp.real = real + obj.real;
+            temp.imag = imag + obj.imag;
+            return temp;
+        }
+        void display(){
+            cout<<real<<"+"<<imag<<"i"<<endl;
+        }
+};
+int main(){
+    Complex c1(3.3,4.4),c2(1.1,2.2);
+    Complex c3 = c1 + c2;
+    c3.display();
+    return 0;
+    
+}
+
+8] Abstract Class:
+Define an abstract class Shape with a pure virtual function area(). Create two derived classes Square and
+ Triangle that implement the area() function. Write a program that uses these classes to calculate the 
+ area of a square and a triangle.
+
+ #include<iostream>
+using namespace std;
+class Shape{
+    public :
+    virtual void area() = 0;
+};
+class Square : public Shape{
+    public :
+        void area() override{
+            int side = 10;
+            int area = side * side;
+            cout<<"Area of Square is : "<<area<<endl;
+        }
+};
+class Triangle : public Shape{
+    public :
+        void area() override{
+            int base = 10;
+            int height = 10;
+            int area = base * height;
+            cout<<"Area of Triangle is : "<<area<<endl;
+        }
+};
+int main(){
+    Square s1;
+    s1.area();
+    
+    Triangle t1;
+    t1.area();
+    
+    return 0;
+}
+
+9] Exception Handling:
+Write a class Division with a method divide(int a, int b) that performs division and throws an exception
+if the divisor is zero. Handle this exception in the main function and display an appropriate error 
+message.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
