@@ -136,6 +136,27 @@ Write a class Counter with a static variable count that tracks the number of obj
 constructor that increments this count and a static method to return the current count. Demonstrate the
 use of this class in a program.
 
+#include<iostream>
+using namespace std;
+class Counter{
+    private :
+        static int count;
+    public :
+        Counter(){
+            count++;
+        }
+        static int getCount(){
+            return count;
+        }
+};
+int Counter::count = 0;
+int main(){
+    Counter c1;
+    Counter c2;
+    Counter c3;
+    cout<<Counter ::getCount();
+    return 0;
+}
 
 6] Friend Function:
 Create two classes, Box and Cube. The Box class has private attributes length, width, and height. The 
