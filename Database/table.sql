@@ -76,4 +76,26 @@ SELECT * FROM STUDENT.INFO ORDER BY FIRSTNAME;
 
 SELECT * FROM STUDENT.INFO ORDER BY STUDENT_ID DESC LIMIT 3;
 
-5] Update and delete records in the table :
+5] Update single records in the table :
+
+UPDATE JINAL.INFO
+SET EMAIL = 'new_email@example.com',
+	MOBILE = '8200524421'
+WHERE 'FIRST_NAME' = 'JOHN';
+
+6] Update multiple records in the table :
+
+UPDATE JINAL.INFO SET PASSWORD = 'test@123' WHERE STUDENT_ID < 6;
+
+7] Delete single record :
+
+DELETE FROM JINAL.INFO WHERE STUDENT_ID = 5;
+
+8] Delete multi records based on condition :
+
+DELETE FROM JINAL.INFO WHERE STUDENT_ID > 3;
+
+
+
+
+
