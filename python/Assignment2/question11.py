@@ -2,8 +2,15 @@
 
 num = int(input("Enter the number : "))
 
-a,b = 0,1
+a , b = 0,1
+print(a,end = " ")
+print(b,end=" ")
 
 for i in range(num):
-    print(a,end = " ")
-    a, b = b, a + b
+    num = a + b
+    a = b
+    b = num
+    print(num,end=" ")
+    
+    
+   
