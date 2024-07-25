@@ -95,6 +95,9 @@ car = {
 # for key in car.keys():
 #     print(key,car[key])
 
+# for key,value in car.items():
+#     print(key,value)
+
 # print only values using for loop:
 # for value in car.values():
 #     print(value)
@@ -103,5 +106,17 @@ car = {
 # for key in car.keys():
 #     print(key)
 
-for key,value in car.items():
-    print(key,value)
+start = 1
+end = 3
+users = []
+
+while(start <= end):
+    user = {}
+    name,age,salary = input("Enter your name,age and salary separated by coma : ").split(",")
+    user['name'] = name
+    user['age'] = age
+    user['salary'] = salary
+    users.append(user)
+    start += 1
+
+print(users)
