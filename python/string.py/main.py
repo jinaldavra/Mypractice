@@ -159,7 +159,27 @@ age = 22
 
 # print(f"My name is {name} and i am {age} year old")
 
-print("My name is %s and i am %d year old" %(name,age))
+# print("My name is %s and i am %d year old" %(name,age))
+
+
+# String formatting with precision and decimal places :
+
+# print("{:.2f}".format(3.141767866) )
+
+
+# String formatting with alignment and padding :
+
+# print("{:^20}".format("Hello, world !"))
+
+# print("{:>20}".format("Hello, world !"))
+
+# print("{:<20}".format("Hello, world !"))
+
+otp = "12345"
+print(f"Your otp is : {otp}")
+
+
+
 
 
 
